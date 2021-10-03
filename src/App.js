@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import About from "./components/about/about.component";
+import Contact from "./components/contact/contact.component";
+import Header from "./components/header/header.component";
+import HeroSection from "./components/hero-section/hero-section.component";
+import ProjectPreview from "./components/project-preview/project-preview.component";
+import Section from "./components/section/section.component";
+import TechStack from "./components/tech-stack/tech-stack.components";
+
+import "./App.css";
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Header />
+      <HeroSection />
+      <main>
+        <Section
+          iconSrc="icons/line-md_account-small.svg"
+          altText="account icon"
+          title="About"
         >
-          Learn React
-        </a>
-      </header>
+          <About />
+        </Section>
+        <Section
+          iconSrc="icons/akar-icons_folder.svg"
+          altText="folder icon"
+          title="Projects"
+        >
+          <ProjectPreview />
+        </Section>
+        <Section
+          iconSrc="icons/ph_stack-light.svg"
+          altText="stack icon"
+          title="Tech stack"
+        >
+          <TechStack />
+        </Section>
+        <Section
+          iconSrc="icons/fluent_contact-card-20-regular.svg"
+          altText="contact card icon"
+          title="Contact"
+        >
+          <Contact />
+        </Section>
+      </main>
     </div>
   );
-}
+};
 
 export default App;

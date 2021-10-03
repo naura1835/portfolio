@@ -21,17 +21,23 @@ const HeroSection = () => {
     const secondBtn = firstBtn.nextSibling;
     const thirdBtn = secondBtn.nextSibling;
     const fourthBtn = thirdBtn.nextSibling;
+    const intro = heroRef.children[0].children[0];
     const animateText = heroRef.children[0].children[1].children[0].children[0];
     const secondText = heroRef.children[0].children[2].children[0].children[0];
 
     let tl = gsap.timeline();
 
     tl.add()
+      .from(intro, {
+        y: -20,
+        autoAlpha: 0,
+        delay: 0.6,
+      })
       .from([animateText, secondText], {
         y: "100%",
         ease: Power4.easeInOut,
         duration: 1.5,
-        delay: 0.2,
+        // delay: 0.8,
         stagger: 0.5,
       })
       .from([firstBtn, secondBtn, thirdBtn, fourthBtn], {
@@ -39,7 +45,7 @@ const HeroSection = () => {
         top: "50%",
         left: "50%",
         ease: Power3.easeIn,
-        delay: 0.4,
+        delay: 1.2,
       });
     gsap.to([firstBtn, secondBtn, thirdBtn, fourthBtn], {
       repeat: -1,

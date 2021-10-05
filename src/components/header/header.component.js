@@ -3,7 +3,14 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
-import { Line, Menu, MenuItem, NavBar, Wrapper } from "./header.styles";
+import {
+  HamburgerMenu,
+  Line,
+  Menu,
+  MenuItem,
+  NavBar,
+  Wrapper,
+} from "./header.styles";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,16 +37,13 @@ const Header = () => {
       },
     });
   });
+  console.log(menu);
 
   return (
     <Wrapper>
       <NavBar>
         {window.innerWidth <= 490 ? (
-          <div
-            style={{
-              display: "block",
-              cursor: "pointer",
-            }}
+          <HamburgerMenu
             onClick={() => {
               SetMenu(!menu);
             }}
@@ -47,7 +51,7 @@ const Header = () => {
             <Line></Line>
             <Line></Line>
             <Line></Line>
-          </div>
+          </HamburgerMenu>
         ) : null}
         <Menu
           menu={menu}

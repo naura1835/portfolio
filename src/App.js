@@ -1,6 +1,7 @@
 import React from "react";
 
 import About from "./components/about/about.component";
+import BackgroundAnimation from "./components/background-animation/background-animation.component";
 import Contact from "./components/contact/contact.component";
 import Header from "./components/header/header.component";
 import HeroSection from "./components/hero-section/hero-section.component";
@@ -14,7 +15,10 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <HeroSection />
+      <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
+        <HeroSection />
+        <BackgroundAnimation />
+      </div>
       <main>
         <Section
           iconSrc="icons/line-md_account-small.svg"
@@ -42,7 +46,7 @@ const App = () => {
           altText="contact card icon"
           title="Contact"
         >
-          <Contact />
+          {/* <Contact /> */}
         </Section>
       </main>
     </div>

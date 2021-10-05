@@ -11,6 +11,13 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 10px;
+
+  @media (max-width: 480px) {
+    width: 8rem;
+  }
+  @media (max-width: 355px) {
+    width: 100%;
+  }
 `;
 export const TechImage = styled.img``;
 export const TechName = styled(CaptionText)``;

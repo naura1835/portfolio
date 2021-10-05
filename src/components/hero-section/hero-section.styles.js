@@ -1,13 +1,19 @@
 import styled from "styled-components";
-import { Display, H1, MediumText } from "../../globalStyles/textStyles";
+import { Display, Heading1, MediumText } from "../../globalStyles/textStyles";
 
 export const Wrapper = styled.div`
-  height: calc(100vh - 4.4rem);
+  // height: calc(100vh - 4.4rem);
+  height: 90vh;
+  width: -webkit-fill-available;
   margin: 0 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  // z-index: 2;
 `;
 export const HeroSectionContent = styled.div`
   position: relative;
@@ -25,53 +31,25 @@ export const Intro = styled(MediumText)`
 `;
 export const TextAnimationDiv = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: auto;
-  gap: 0;
+  gap: 10px;
   margin: 0;
 `;
-export const Title = styled(H1)`
+export const Title = styled(Heading1)`
   position: relative;
-  display: flex;
-  justify-content: center;
   color: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  height: 58px;
-  margin: 0;
   overflow-y: hidden;
+  text-align: center;
 `;
-export const SubTitle = styled.div`
+export const SubTitle = styled(Display)`
   position: relative;
-  display: flex;
-  justify-content: center;
   overflow-y: hidden;
   color: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  height: 90px;
-  margin: 0;
-
-  font-size: 70px;
-  font-weight: bold;
-  font-family: "Roboto";
-
-  @media (max-width: 995px) {
-    height: 70px;
-    font-size: 60px;
-  }
-  @media (max-width: 784px) {
-    height: 60px;
-    font-size: 50px;
-  }
-  @media (max-width: 450px) {
-    height: 58px;
-    font-size: 48px;
-  }
-
-  @media (max-width: 414px) {
-    height: 44px;
-    font-size: 34px;
-  }
+  text-align: center;
 `;
 export const SpanText = styled.div`
-  position: absolute;
+  display: inline-block;
+  transform: translateY(100%);
 `;

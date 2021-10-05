@@ -12,18 +12,24 @@ import {
   Title,
   Wrapper,
 } from "./hero-section.styles";
+import { SlowMo } from "gsap/all";
 
 const HeroSection = () => {
   let heroRef = useRef(null);
 
   useEffect(() => {
-    const firstBtn = heroRef.children[0].children[3];
+    const firstBtn = heroRef.children[0].children[2];
     const secondBtn = firstBtn.nextSibling;
     const thirdBtn = secondBtn.nextSibling;
     const fourthBtn = thirdBtn.nextSibling;
     const intro = heroRef.children[0].children[0];
     const animateText = heroRef.children[0].children[1].children[0].children[0];
-    const secondText = heroRef.children[0].children[2].children[0].children[0];
+    const secondText = heroRef.children[0].children[1].children[1].children[0];
+    const developerText =
+      heroRef.children[0].children[1].children[1].children[1];
+
+    console.log(animateText);
+    console.log(secondText);
 
     let tl = gsap.timeline();
 
@@ -33,19 +39,32 @@ const HeroSection = () => {
         autoAlpha: 0,
         delay: 0.6,
       })
-      .from([animateText, secondText], {
-        y: "100%",
-        ease: Power4.easeInOut,
-        duration: 1.5,
-        // delay: 0.8,
-        stagger: 0.5,
-      })
+      .to(
+        animateText,
+        {
+          y: "0%",
+          ease: Power4.easeInOut,
+          duration: 0.7,
+        },
+        "s"
+      )
+      .to(
+        [secondText.children, developerText.children],
+        {
+          y: "0%",
+          ease: Power4.easeInOut,
+          duration: 0.7,
+          delay: 0.2,
+          stagger: window.innerWidth > 623 ? 0 : 0.2,
+        },
+        "s"
+      )
       .from([firstBtn, secondBtn, thirdBtn, fourthBtn], {
         autoAlpha: 0,
         top: "50%",
         left: "50%",
         ease: Power3.easeIn,
-        delay: 1.2,
+        delay: 0.8,
       });
     gsap.to([firstBtn, secondBtn, thirdBtn, fourthBtn], {
       repeat: -1,
@@ -69,11 +88,20 @@ const HeroSection = () => {
             <Title>
               <SpanText>Khadija Gwarzo</SpanText>
             </Title>
-          </TextAnimationDiv>
-          <TextAnimationDiv>
-            <SubTitle>
-              <SpanText>I'm a front-end developer.</SpanText>
-            </SubTitle>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              <SubTitle>
+                <SpanText>I'm a front-end</SpanText>
+              </SubTitle>
+              <SubTitle>
+                <SpanText>&nbsp;developer.</SpanText>
+              </SubTitle>
+            </div>
           </TextAnimationDiv>
         </>
         <CTAButton

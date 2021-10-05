@@ -4,6 +4,7 @@ import { MediumText } from "../../globalStyles/textStyles";
 export const Wrapper = styled.header`
   background-color: #e3e8ff;
   width: 96vw;
+  height: 10vh;
 `;
 export const NavBar = styled.nav`
   margin: 0 auto;
@@ -19,6 +20,10 @@ export const NavBar = styled.nav`
     gap: 8px;
     position: relative;
   }
+`;
+export const HamburgerMenu = styled.div`
+  display: block;
+  z-index: 50;
 `;
 export const Line = styled.span`
   display: block;

@@ -20,7 +20,7 @@ export const Display = styled.h1`
     font-size: 34px;
   }
 `;
-export const H1 = styled.h1`
+export const Heading1 = styled.h1`
   font-size: 48px;
   font-weight: bold;
   font-family: "Roboto";

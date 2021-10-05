@@ -5,19 +5,16 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 60ch;
 
-  ${
-    "" /* @media (max-width: 605px) {
+  @media (max-width: 660px) {
     width: 100%;
-  } */
   }
 `;
-export const Description = styled(MediumText)`
-  width: 60ch;
-`;
+export const TechDescription = styled(MediumText)``;
 export const TechStackWrapper = styled.div`
-  width: 40vw;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   gap: 20px;
 `;

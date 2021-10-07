@@ -10,7 +10,6 @@ import {
 } from "./tech-stack.styles";
 
 const TechStack = () => {
-  console.log(techData);
   return (
     <Wrapper>
       <TechDescription>

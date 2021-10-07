@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.form`
   background-color: rgba(26, 33, 81, 0.1);
   border-radius: 12px;
   background-color: rgba(26, 33, 81, 0.1);
@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   padding: 2rem 2rem;
   gap: 20px;
   width: 600px;
-  height: 400px;
+  height: auto;
   z-index: 10;
 
   @media (max-width: 705px) {

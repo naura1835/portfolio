@@ -57,7 +57,7 @@ const Project = ({ project }) => {
               <Tech>{item}</Tech>
             ))}
           </TechStack> */}
-          <Link>
+          <Link to="/">
             <LinkIcon
               src={
                 require("../../images/icons/codicon_link-external.svg").default

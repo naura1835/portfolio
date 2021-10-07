@@ -28,9 +28,6 @@ const HeroSection = () => {
     const developerText =
       heroRef.children[0].children[1].children[1].children[1];
 
-    console.log(animateText);
-    console.log(secondText);
-
     let tl = gsap.timeline();
 
     tl.add()

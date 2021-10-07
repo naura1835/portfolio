@@ -22,3 +22,6 @@ a {
   text-decoration: none;
   color: rgba(26, 33, 81, 1);
 }
+.App {
+  overflow-x: hidden;
+}

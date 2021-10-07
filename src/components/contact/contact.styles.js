@@ -6,7 +6,8 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media (max-width: 605px) {
+    width: 100%;
+  }
 `;
-export const Description = styled(MediumText)`
-  width: 60ch;
-`;
+export const ContactIntro = styled(MediumText)``;

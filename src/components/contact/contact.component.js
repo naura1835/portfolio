@@ -3,7 +3,7 @@ import { gsap, Power0 } from "gsap";
 
 import ContactForm from "../contact-form/contact-form.component";
 
-import { Description, Wrapper } from "./contact.styles";
+import { ContactIntro, Wrapper } from "./contact.styles";
 
 const Contact = () => {
   let contactRef = useRef(null);
@@ -29,9 +29,9 @@ const Contact = () => {
         contactRef = el;
       }}
     >
-      <Description>
+      <ContactIntro>
         I look forward to hearing from you about new projects and opportunities.
-      </Description>
+      </ContactIntro>
       <ContactForm />
     </Wrapper>
   );

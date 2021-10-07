@@ -46,7 +46,7 @@ const App = () => {
           altText="contact card icon"
           title="Contact"
         >
-          {/* <Contact /> */}
+          <Contact />
         </Section>
       </main>
     </div>

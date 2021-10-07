@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SlowMo } from "gsap/all";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 
 import {
@@ -15,6 +16,8 @@ import {
   Title,
   Wrapper,
 } from "./project.styles";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Project = ({ project }) => {
   const { imgSrc, title, description, techStack } = project;

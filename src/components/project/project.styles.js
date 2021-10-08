@@ -46,6 +46,8 @@ export const Projectmage = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
+  transition: clip-path 1s ease-out;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 `;
 export const ProjectDetails = styled.div`
   margin: 2vh;

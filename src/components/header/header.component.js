@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { a } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
@@ -37,7 +37,6 @@ const Header = () => {
       },
     });
   });
-  console.log(menu);
 
   return (
     <Wrapper>
@@ -60,16 +59,16 @@ const Header = () => {
           }}
         >
           <MenuItem>
-            <Link to="/">Home</Link>
+            <a href="/#home">Home</a>
           </MenuItem>
           <MenuItem>
-            <Link to="/">About</Link>
+            <a href="/#about">About</a>
           </MenuItem>
           <MenuItem>
-            <Link to="/">Projects</Link>
+            <a href="/#projects">Projects</a>
           </MenuItem>
           <MenuItem>
-            <Link to="/">Contact Us</Link>
+            <a href="/#contact">Contact Us</a>
           </MenuItem>
         </Menu>
       </NavBar>
@@ -78,8 +77,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// style={{
-//     color: `white`,
-//     textDecoration: `none`,
-//   }}

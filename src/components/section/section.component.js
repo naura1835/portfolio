@@ -18,7 +18,6 @@ const Section = ({ iconSrc, altText, title, children }) => {
       scrollTrigger: {
         trigger: sectionRef,
         start: "top center",
-        markers: true,
         toggleActions: "play none none none",
       },
     });

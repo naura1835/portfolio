@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import { gsap, Power0 } from "gsap";
 import { SlowMo } from "gsap/all";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
@@ -25,18 +25,45 @@ const Project = ({ project }) => {
   let projectRef = useRef(null);
 
   useEffect(() => {
-    gsap.from(projectRef, {
+    let tl = gsap.timeline({
       scrollTrigger: {
         trigger: projectRef,
-        markers: true,
         start: "top+=50 center",
       },
-      ease: SlowMo.easeIn,
-      duration: 1.4,
+    });
+    tl.from(projectRef, {
+      // ease: SlowMo.easeIn,
+      duration: 0.5,
       autoAlpha: 0,
-      x: "100%",
+      scale: 0.7,
+      ease: Power0.easeIn,
+      // x: "100%",
       delay: 0.4,
       stagger: 0.2,
+    });
+    tl.from(
+      projectRef.children[0].children[0],
+      {
+        // autoAlpha: 0,
+        duration: 0.7,
+        delay: 0.4,
+        clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+        // transformOrigin: "top",
+      },
+      "s"
+    );
+    tl.from(
+      projectRef.children[1],
+      {
+        autoAlpha: 0,
+        delay: 0.4,
+        scaleY: 0.4,
+        transformOrigin: "top",
+      },
+      "s"
+    );
+    tl.from(projectRef.children[1].children, {
+      autoAlpha: 0,
     });
   });
 

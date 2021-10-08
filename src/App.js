@@ -10,12 +10,16 @@ import Section from "./components/section/section.component";
 import TechStack from "./components/tech-stack/tech-stack.components";
 
 import "./App.css";
+import Services from "./components/services/services.component";
 
 const App = () => {
   return (
     <div className="App">
       <Header />
-      <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
+      <div
+        style={{ position: "relative", width: "100%", overflow: "hidden" }}
+        id="home"
+      >
         <HeroSection />
         <BackgroundAnimation />
       </div>
@@ -30,7 +34,15 @@ const App = () => {
         <Section
           iconSrc="icons/akar-icons_folder.svg"
           altText="folder icon"
+          title="Services"
+        >
+          <Services />
+        </Section>
+        <Section
+          iconSrc="icons/akar-icons_folder.svg"
+          altText="folder icon"
           title="Projects"
+          id="projects"
         >
           <ProjectPreview />
         </Section>
@@ -45,6 +57,7 @@ const App = () => {
           iconSrc="icons/fluent_contact-card-20-regular.svg"
           altText="contact card icon"
           title="Contact"
+          id="contact"
         >
           <Contact />
         </Section>

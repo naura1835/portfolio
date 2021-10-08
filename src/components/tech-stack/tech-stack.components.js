@@ -1,4 +1,5 @@
-import React from "react";
+import gsap from "gsap";
+import React, { useEffect, useRef } from "react";
 
 import { techData } from "../../data/techData";
 import TechChip from "../tech-chip/tech-chip.component";
@@ -10,8 +11,37 @@ import {
 } from "./tech-stack.styles";
 
 const TechStack = () => {
+  let techRef = useRef(null);
+
+  useEffect(() => {
+    const techDescription = techRef.children[0];
+    const techStack = techDescription.nextSibling;
+
+    gsap.from(techDescription, {
+      scrollTrigger: {
+        trigger: techRef,
+        start: "top center",
+      },
+      autoAlpha: 0,
+      x: 20,
+      delay: 0.8,
+    });
+    gsap.from(techStack.children, {
+      scrollTrigger: {
+        trigger: techRef,
+        start: "top center",
+      },
+      autoAlpha: 0,
+      stagger: 0.2,
+      delay: 0.8,
+    });
+  });
   return (
-    <Wrapper>
+    <Wrapper
+      ref={(el) => {
+        techRef = el;
+      }}
+    >
       <TechDescription>
         my name is berry allen and im the fastest man alive, when i was a child
         i saw my father killed by something impossible then and accident made me

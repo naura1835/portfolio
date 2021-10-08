@@ -5,13 +5,18 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 60ch;
+  width: 70ch;
 
   @media (max-width: 660px) {
     width: 100%;
   }
 `;
-export const TechDescription = styled(MediumText)``;
+export const TechDescription = styled(MediumText)`
+  width: 80%;
+  @media (max-width: 660px) {
+    width: 100%;
+  }
+`;
 export const TechStackWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;

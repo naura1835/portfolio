@@ -12,7 +12,7 @@ const BackgroundAnimation = () => {
       duration: 0.8,
       autoAlpha: 0,
       scale: 0.8,
-      delay: 0.8,
+      delay: 1.8,
       ease: Power4.easeIn,
     });
   });

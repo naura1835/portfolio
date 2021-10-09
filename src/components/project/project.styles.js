@@ -25,17 +25,22 @@ export const Wrapper = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
   @media (max-width: 967px) {
-    height: fit-content;
-    display: flex;
-    flex-direction: column-reverse;
-    row-gap: 5vh;
-    gap: 5vh;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "details"
+      "picture";
+    grid-gap: 10vh;
     padding: 5vw;
   }
 `;
 export const ImageWrapper = styled.div`
   width: 100%;
   height: 300px;
+  @media (max-width: 967px) {
+    grid-area: picture;
+  }
   @media (max-width: 480px) {
     width: 100%;
   }
@@ -60,6 +65,7 @@ export const ProjectDetails = styled.div`
   @media (max-width: 967px) {
     margin: 0;
     height: auto;
+    grid-area: details;
   }
 `;
 export const Title = styled(BodyIntroText)`

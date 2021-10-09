@@ -15,7 +15,8 @@ const Contact = () => {
     gsap.from(contactIntro, {
       scrollTrigger: {
         trigger: contactRef,
-        start: "top center",
+        start: "top center+=150",
+        markers: true,
       },
       autoAlpha: 0,
       x: 20,

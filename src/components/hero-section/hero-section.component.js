@@ -13,8 +13,6 @@ import {
   Title,
   Wrapper,
 } from "./hero-section.styles";
-import { SlowMo } from "gsap/all";
-import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 const HeroSection = () => {
@@ -134,6 +132,7 @@ const HeroSection = () => {
               classInfo="twt"
             />
             <CTAButton
+              url="https://github.com/naura1835"
               socialIcon="icons/akar-icons_github-fill.svg"
               altText="Github icon"
               classInfo="github"
@@ -151,7 +150,7 @@ const HeroSection = () => {
           </>
         ) : (
           <div style={{ display: "flex", gap: "20px" }}>
-            <Link to="/">
+            <a href="/" target="_blank" rel="noreferrer">
               <img
                 src={
                   require("../../images/icons/outline/iconoir_twitter.svg")
@@ -159,8 +158,12 @@ const HeroSection = () => {
                 }
                 alt="Twitter icon"
               />
-            </Link>
-            <Link to="/">
+            </a>
+            <a
+              href="https://github.com/naura1835"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={
                   require("../../images/icons/outline/codicon_github-alt.svg")
@@ -168,8 +171,8 @@ const HeroSection = () => {
                 }
                 alt="Github icon"
               />
-            </Link>
-            <Link to="/">
+            </a>
+            <a href="/" target="_blank" rel="noreferrer">
               <img
                 src={
                   require("../../images/icons/outline/ph_linkedin-logo.svg")
@@ -177,15 +180,15 @@ const HeroSection = () => {
                 }
                 alt="LinkedIn icon"
               />
-            </Link>
-            <Link to="/">
+            </a>
+            <a href="/" target="_blank" rel="noreferrer">
               <img
                 src={
                   require("../../images/icons/outline/carbon_email.svg").default
                 }
                 alt="Email icon"
               />
-            </Link>
+            </a>
           </div>
         )}
       </HeroSectionContent>

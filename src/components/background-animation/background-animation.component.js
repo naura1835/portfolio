@@ -7,12 +7,12 @@ const BackgroundAnimation = () => {
   let pixelRef = useRef(null);
 
   useEffect(() => {
-    gsap.from(pixelRef.children, {
+    gsap.to(pixelRef.children, {
       stagger: 0.1,
       duration: 0.8,
-      autoAlpha: 0,
-      scale: 0.8,
       delay: 1.8,
+      scale: 1.0,
+      autoAlpha: 1,
       ease: Power4.easeIn,
     });
   });

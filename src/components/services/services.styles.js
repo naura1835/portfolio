@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BodyMainText, H2, MediumText } from "../../globalStyles/textStyles";
+import { BodyMainText, H2 } from "../../globalStyles/textStyles";
 
 export const Wrapper = styled.div`
   width: 100%;

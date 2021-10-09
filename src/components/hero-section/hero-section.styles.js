@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  // z-index: 2;
+  z-index: 2;
 `;
 export const HeroSectionContent = styled.div`
   position: relative;

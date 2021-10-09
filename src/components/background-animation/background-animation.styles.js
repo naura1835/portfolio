@@ -4,12 +4,13 @@ export const Wrapper = styled.div`
   // height: calc(100vh - 4.4rem);
   height: 90vh;
   width: 100%;
-  z-index: -1;
 `;
 export const Pixel = styled.div`
   position: absolute;
   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-  // z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
 
   background: ${(props) => props.pixelColor};
   height: ${(props) => props.size};

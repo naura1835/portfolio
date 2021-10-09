@@ -1,17 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import { ButtonWrapper, SocialIcon } from "./CTA-button.styles";
 
-const CTAButton = ({ socialIcon, altText, classInfo }) => {
+const CTAButton = ({ url, socialIcon, altText, classInfo }) => {
   return (
     <ButtonWrapper className={classInfo}>
-      <Link to="/">
+      <a href={url} target="_blank" rel="noreferrer">
         <SocialIcon
           src={require(`../../images/${socialIcon}`).default}
           alt={altText}
         />
-      </Link>
+      </a>
     </ButtonWrapper>
   );
 };

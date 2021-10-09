@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { gsap, Power0 } from "gsap";
-import { SlowMo } from "gsap/all";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { Link } from "react-router-dom";
 
 import {
   Description,
@@ -10,9 +8,7 @@ import {
   LinkIcon,
   ProjectDetails,
   Projectmage,
-  Tech,
   TechLinkWrapper,
-  TechStack,
   Title,
   Wrapper,
 } from "./project.styles";
@@ -20,7 +16,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const Project = ({ project }) => {
-  const { imgSrc, title, description, techStack, url } = project;
+  const { imgSrc, title, description, url } = project;
 
   let projectRef = useRef(null);
 
@@ -80,12 +76,7 @@ const Project = ({ project }) => {
           <Description>{description}</Description>
         </div>
         <TechLinkWrapper>
-          {/* <TechStack>
-            {techStack.map((item) => (
-              <Tech>{item}</Tech>
-            ))}
-          </TechStack> */}
-          <a href={url} target="_blank">
+          <a href={url} target="_blank" rel="noreferrer">
             <LinkIcon
               src={
                 require("../../images/icons/codicon_link-external.svg").default

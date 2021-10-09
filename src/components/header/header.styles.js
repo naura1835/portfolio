@@ -22,8 +22,11 @@ export const NavBar = styled.nav`
   }
 `;
 export const HamburgerMenu = styled.div`
-  display: block;
-  z-index: 50;
+  display: none;
+  @media (max-width: 490px) {
+    display: block;
+    z-index: 50;
+  }
 `;
 export const Line = styled.span`
   display: block;

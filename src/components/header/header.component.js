@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
 
 import {
   HamburgerMenu,
@@ -11,11 +10,10 @@ import {
   Wrapper,
 } from "./header.styles";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Header = () => {
   const [menu, SetMenu] = useState(false);
   let menuRef = useRef(null);
+  let HamburgerRef = useRef(null);
 
   useEffect(() => {
     const firstMenuItem = menuRef.children[0];
@@ -23,34 +21,47 @@ const Header = () => {
     const thirdMenuItem = secondMenuItem.nextSibling;
     const fourthMenuItem = thirdMenuItem.nextSibling;
 
-    ScrollTrigger.matchMedia({
-      "(min-width: 491px)": function () {
-        gsap.from(
-          [firstMenuItem, secondMenuItem, thirdMenuItem, fourthMenuItem],
-          {
-            y: -20,
-            autoAlpha: 0,
-            delay: 0.4,
-          }
-        );
-      },
-    });
+    if (window.innerWidth <= 491) {
+      gsap.from(
+        [firstMenuItem, secondMenuItem, thirdMenuItem, fourthMenuItem],
+        {
+          y: -20,
+          autoAlpha: 0,
+          delay: 0.4,
+        }
+      );
+    }
+
+    let handleClick = (event) => {
+      if (!HamburgerRef.current.contains(event.target)) {
+        SetMenu(!menu);
+      }
+    };
+
+    if (menu) {
+      document.addEventListener("click", handleClick);
+      return () => {
+        document.removeEventListener("click", handleClick);
+      };
+    }
   });
 
   return (
     <Wrapper>
       <NavBar>
-        {window.innerWidth <= 490 ? (
-          <HamburgerMenu
-            onClick={() => {
-              SetMenu(!menu);
-            }}
-          >
-            <Line></Line>
-            <Line></Line>
-            <Line></Line>
-          </HamburgerMenu>
-        ) : null}
+        {/* {window.innerWidth <= 490 ? ( */}
+        <HamburgerMenu
+          onClick={() => {
+            SetMenu(!menu);
+          }}
+          id="hamburger"
+          ref={HamburgerRef}
+        >
+          <Line></Line>
+          <Line></Line>
+          <Line></Line>
+        </HamburgerMenu>
+        {/* ) : null} */}
         <Menu
           menu={menu}
           ref={(el) => {

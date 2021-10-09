@@ -24,6 +24,7 @@ const App = () => {
         <BackgroundAnimation />
       </div>
       <main>
+        <div id="about" />
         <Section
           iconSrc="icons/line-md_account-small.svg"
           altText="account icon"
@@ -38,6 +39,7 @@ const App = () => {
         >
           <Services />
         </Section>
+        <div id="projects" />
         <Section
           iconSrc="icons/akar-icons_folder.svg"
           altText="folder icon"
@@ -53,6 +55,7 @@ const App = () => {
         >
           <TechStack />
         </Section>
+        <div id="contact" />
         <Section
           iconSrc="icons/fluent_contact-card-20-regular.svg"
           altText="contact card icon"

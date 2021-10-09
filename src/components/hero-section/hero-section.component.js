@@ -17,10 +17,12 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 const HeroSection = () => {
   let heroRef = useRef(null);
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
 
   useEffect(() => {
-    if (window.innerWidth > 800) {
-    }
     const intro = heroRef.children[0].children[0];
     const animateText = heroRef.children[0].children[1].children[0].children[0];
     const secondText = heroRef.children[0].children[1].children[1].children[0];
@@ -29,72 +31,80 @@ const HeroSection = () => {
 
     let tl = gsap.timeline();
 
-    ScrollTrigger.matchMedia({
-      all: function () {
-        tl.add()
-          .from(intro, {
-            y: -20,
-            autoAlpha: 0,
-            delay: 0.6,
-          })
-          .to(
-            animateText,
-            {
-              y: "0%",
-              ease: Power4.easeInOut,
-              duration: 0.7,
-            },
-            "s"
-          )
-          .to(
-            [secondText.children, developerText.children],
-            {
-              y: "0%",
-              ease: Power4.easeInOut,
-              duration: 0.7,
-              delay: 0.2,
-              stagger: window.innerWidth > 623 ? 0 : 0.2,
-            },
-            "s"
-          );
-      },
-      "(max-width: 711px)": function () {
-        const firstSocial = heroRef.children[0].children[2].children[0];
-        const secondSocial = firstSocial.nextSibling;
-        const thirdSocial = secondSocial.nextSibling;
-        const fourthSocial = thirdSocial.nextSibling;
-
-        tl.from([firstSocial, secondSocial, thirdSocial, fourthSocial], {
-          autoAlpha: 0,
-          y: "100%",
+    tl.add()
+      .from(intro, {
+        y: -20,
+        autoAlpha: 0,
+        delay: 0.6,
+      })
+      .to(
+        animateText,
+        {
+          y: "0%",
           ease: Power4.easeInOut,
           duration: 0.7,
-        });
-      },
-      "(min-width: 712px)": function () {
-        const firstBtn = heroRef.children[0].children[2];
-        const secondBtn = firstBtn.nextSibling;
-        const thirdBtn = secondBtn.nextSibling;
-        const fourthBtn = thirdBtn.nextSibling;
+        },
+        "s"
+      )
+      .to(
+        [secondText.children, developerText.children],
+        {
+          y: "0%",
+          ease: Power4.easeInOut,
+          duration: 0.7,
+          delay: 0.2,
+          stagger: window.innerWidth > 623 ? 0 : 0.2,
+        },
+        "s"
+      );
+    if (window.innerWidth < 711) {
+      const firstSocial = heroRef.children[0].children[2].children[0];
+      const secondSocial = heroRef.children[0].children[2].children[1];
+      const thirdSocial = heroRef.children[0].children[2].children[2];
+      const fourthSocial = heroRef.children[0].children[2].children[3];
 
-        tl.from([firstBtn, secondBtn, thirdBtn, fourthBtn], {
-          autoAlpha: 0,
-          top: "50%",
-          left: "50%",
-          ease: Power3.easeIn,
-          delay: 0.8,
-        });
-        gsap.to([firstBtn, secondBtn, thirdBtn, fourthBtn], {
-          repeat: 1,
-          // yoyo: true,
-          duration: 0.8,
-          y: -2,
-          ease: Power1.easeInOut,
-        });
-      },
+      tl.from([firstSocial, secondSocial, thirdSocial, fourthSocial], {
+        autoAlpha: 0,
+        y: "100%",
+        ease: Power4.easeInOut,
+        duration: 0.7,
+      });
+    } else {
+      const firstBtn = heroRef.children[0].children[2];
+      const secondBtn = heroRef.children[0].children[3];
+      const thirdBtn = heroRef.children[0].children[4];
+      const fourthBtn = heroRef.children[0].children[5];
+
+      tl.from([firstBtn, secondBtn, thirdBtn, fourthBtn], {
+        autoAlpha: 0,
+        top: "50%",
+        left: "50%",
+        ease: Power3.easeIn,
+        delay: 0.8,
+      });
+      gsap.to([firstBtn, secondBtn, thirdBtn, fourthBtn], {
+        repeat: 1,
+        // yoyo: true,
+        duration: 0.8,
+        y: -2,
+        ease: Power1.easeInOut,
+      });
+    }
+    window.addEventListener("resize", () => {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
     });
-  });
-
+    return () => {
+      window.removeEventListener("resize", () => {
+        setDimensions({
+          height: window.innerHeight,
+          width: window.innerWidth,
+        });
+      });
+    };
+  }, [setDimensions]);
   return (
     <Wrapper
       ref={(el) => {
@@ -138,11 +148,13 @@ const HeroSection = () => {
               classInfo="github"
             />
             <CTAButton
+              url="https://www.linkedin.com/in/khadija-garba-6257a4201"
               socialIcon="icons/ant-design_linkedin-filled.svg"
               altText="LinkedIn icon"
               classInfo="linkedIn"
             />
             <CTAButton
+              url="mailto:khadijagarbag@gmail.com"
               socialIcon="icons/carbon_email.svg"
               altText="Email icon"
               classInfo="email"
@@ -172,7 +184,11 @@ const HeroSection = () => {
                 alt="Github icon"
               />
             </a>
-            <a href="/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com/in/khadija-garba-6257a4201"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={
                   require("../../images/icons/outline/ph_linkedin-logo.svg")
@@ -181,7 +197,11 @@ const HeroSection = () => {
                 alt="LinkedIn icon"
               />
             </a>
-            <a href="/" target="_blank" rel="noreferrer">
+            <a
+              href="mailto:khadijagarbag@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={
                   require("../../images/icons/outline/carbon_email.svg").default

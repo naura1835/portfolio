@@ -21,7 +21,7 @@ const Header = () => {
     const thirdMenuItem = secondMenuItem.nextSibling;
     const fourthMenuItem = thirdMenuItem.nextSibling;
 
-    if (window.innerWidth <= 491) {
+    if (window.innerWidth >= 491) {
       gsap.from(
         [firstMenuItem, secondMenuItem, thirdMenuItem, fourthMenuItem],
         {

@@ -9,7 +9,7 @@ export const Wrapper = styled.form`
   display: grid;
   grid-template-columns: 1fr;
   padding: 2rem 2rem;
-  grid-ap: 20px;
+  grid-gap: 20px;
   width: 600px;
   height: auto;
   z-index: 10;

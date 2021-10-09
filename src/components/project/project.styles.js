@@ -44,7 +44,6 @@ export const ImageWrapper = styled.div`
 export const Projectmage = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 12px;
   transition: clip-path 1s ease-out;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);

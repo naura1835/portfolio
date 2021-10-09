@@ -20,7 +20,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const Project = ({ project }) => {
-  const { imgSrc, title, description, techStack } = project;
+  const { imgSrc, title, description, techStack, url } = project;
 
   let projectRef = useRef(null);
 
@@ -44,11 +44,9 @@ const Project = ({ project }) => {
     tl.from(
       projectRef.children[0].children[0],
       {
-        // autoAlpha: 0,
         duration: 0.7,
         delay: 0.4,
         clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-        // transformOrigin: "top",
       },
       "s"
     );
@@ -87,13 +85,13 @@ const Project = ({ project }) => {
               <Tech>{item}</Tech>
             ))}
           </TechStack> */}
-          <Link to="/">
+          <a href={url} target="_blank">
             <LinkIcon
               src={
                 require("../../images/icons/codicon_link-external.svg").default
               }
             />
-          </Link>
+          </a>
         </TechLinkWrapper>
       </ProjectDetails>
     </Wrapper>

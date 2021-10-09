@@ -82,12 +82,10 @@ const Services = () => {
       }}
     >
       <ServiceWrapper>
-        <Title>Stunning Designs Brought to Life</Title>
+        <Title>Amazing Designs Brought to Life</Title>
         <Description>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum
-          odio vitae risus pulvinar sagittis. Donec porttitor, felis sit amet
-          efficitur consequat, odio vitae risus pulvinar sagittis. Donec
-          porttitor, felis sit amet efficitur consequat,
+          Building websites to keep your users engaged with subtle and wow
+          factor animations, while keeping it responsive and user friendly.
         </Description>
       </ServiceWrapper>
       <Pama />

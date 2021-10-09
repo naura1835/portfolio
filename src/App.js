@@ -32,7 +32,7 @@ const App = () => {
           <About />
         </Section>
         <Section
-          iconSrc="icons/akar-icons_folder.svg"
+          iconSrc="icons/et_gears.svg"
           altText="folder icon"
           title="Services"
         >

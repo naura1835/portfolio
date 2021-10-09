@@ -24,22 +24,17 @@ const About = () => {
       }}
     >
       <Description>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum
-        odio vitae risus pulvinar sagittis. Donec porttitor, felis sit amet
-        efficitur consequat, tellus mi scelerisque metus, sit amet cursus magna
-        nisi ut libero. Curabitur non ullamcorper quam, sit amet fermentum
-        magna. Proin cursus ipsum libero, in fringilla ex convallis ac. Maecenas
-        id elit cursus, elementum arcu eget, consectetur lorem. Integer cursus
-        elementum orci sit amet imperdiet. Duis ut pretium enim.
+        A front end developer building captivating user interfaces that keep
+        users engaged while offering reliable solutions from concept to design
+        and finally development phase. I'm constantly looking for opportunities
+        to learn new thing and gain experiences while putting what i've learnt
+        into action.
       </Description>
       <Description>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum
-        odio vitae risus pulvinar sagittis. Donec porttitor, felis sit amet
-        efficitur consequat, tellus mi scelerisque metus, sit amet cursus magna
-        nisi ut libero. Curabitur non ullamcorper quam, sit amet fermentum
-        magna. Proin cursus ipsum libero, in fringilla ex convallis ac. Maecenas
-        id elit cursus, elementum arcu eget, consectetur lorem. Integer cursus
-        elementum orci sit amet imperdiet. Duis ut pretium enim.
+        I am a very outgoing person who is passionate about programming among
+        other things, when i am not behind a computer screen you'd find me in
+        the kitchen doing what i love which is baking. I am also an ARMY (BTS
+        fan) so that should tell you about how determined i am.
       </Description>
     </Wrapper>
   );

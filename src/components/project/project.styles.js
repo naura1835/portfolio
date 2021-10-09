@@ -28,9 +28,7 @@ export const Wrapper = styled.div`
     height: auto;
     display: flex;
     flex-direction: column-reverse;
-    row-gap: 40px;
-    // grid-template-columns: 1fr;
-    // grid-template-rows 300px auto;
+    row-gap: 5vh;
     padding: 5vw;
   }
 `;

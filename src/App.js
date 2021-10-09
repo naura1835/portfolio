@@ -7,10 +7,10 @@ import Header from "./components/header/header.component";
 import HeroSection from "./components/hero-section/hero-section.component";
 import ProjectPreview from "./components/project-preview/project-preview.component";
 import Section from "./components/section/section.component";
+import Services from "./components/services/services.component";
 import TechStack from "./components/tech-stack/tech-stack.components";
 
 import "./App.css";
-import Services from "./components/services/services.component";
 
 const App = () => {
   return (

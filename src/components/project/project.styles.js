@@ -31,7 +31,7 @@ export const Wrapper = styled.div`
     grid-template-areas:
       "details"
       "picture";
-    grid-gap: 10vh;
+    grid-gap: 5vh;
     padding: 5vw;
   }
 `;

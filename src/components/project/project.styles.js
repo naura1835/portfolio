@@ -25,10 +25,11 @@ export const Wrapper = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
   @media (max-width: 967px) {
-    height: auto;
+    height: fit-content;
     display: flex;
     flex-direction: column-reverse;
     row-gap: 5vh;
+    gap: 5vh;
     padding: 5vw;
   }
 `;

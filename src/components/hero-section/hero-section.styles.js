@@ -28,6 +28,8 @@ export const Intro = styled(MediumText)`
   font-family: "Roboto Mono";
   color: rgba(0, 0, 0, 0.7);
   width: fit-content;
+  opacity: 0;
+  transform: translateY(-20px);
 `;
 export const TextAnimationDiv = styled.div`
   display: flex;

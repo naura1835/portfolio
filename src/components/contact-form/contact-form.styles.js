@@ -6,10 +6,10 @@ export const Wrapper = styled.form`
   background-color: rgba(26, 33, 81, 0.1);
   box-shadow: 0px 4px 8px rgba(26, 33, 81, 0.4);
   backdrop-filter: blur(20px);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 2rem 2rem;
-  gap: 20px;
+  grid-ap: 20px;
   width: 600px;
   height: auto;
   z-index: 10;

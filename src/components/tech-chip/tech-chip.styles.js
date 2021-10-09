@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { CaptionText } from "../../globalStyles/textStyles";
 
 export const Wrapper = styled.div`
-  width: 10rem;
+  width: 100%;
   height: 3rem;
   border-radius: 12px;
   background-color: rgba(26, 33, 81, 0.1);

@@ -32,9 +32,9 @@ const HeroSection = () => {
     let tl = gsap.timeline();
 
     tl.add()
-      .from(intro, {
-        y: -20,
-        autoAlpha: 0,
+      .to(intro, {
+        y: 0,
+        autoAlpha: 1,
         delay: 0.6,
       })
       .to(

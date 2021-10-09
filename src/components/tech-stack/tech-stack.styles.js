@@ -18,8 +18,11 @@ export const TechDescription = styled(MediumText)`
   }
 `;
 export const TechStackWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   gap: 20px;
+  @media (max-width: 660px) {
+    width: 100%;
+  }
 `;

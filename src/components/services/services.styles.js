@@ -21,10 +21,11 @@ export const Wrapper = styled.div`
     flex-direction: column;
     height: fit-content;
     align-items: flex-start;
-    gap: 60px;
     padding: 5vw 4vw;
+    padding-top: 60px;
     > svg {
       width: 100%;
+      height: 40%;
     }
   }
 `;

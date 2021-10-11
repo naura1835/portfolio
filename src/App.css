@@ -30,4 +30,5 @@ a {
 }
 .App {
   overflow-x: hidden;
+  visibility: hidden;
 }

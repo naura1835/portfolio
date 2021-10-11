@@ -83,8 +83,8 @@ const HeroSection = () => {
         delay: 0.8,
       });
       gsap.to([firstBtn, secondBtn, thirdBtn, fourthBtn], {
-        repeat: 1,
-        // yoyo: true,
+        repeat: -1,
+        yoyo: true,
         duration: 0.8,
         y: -2,
         ease: Power1.easeInOut,

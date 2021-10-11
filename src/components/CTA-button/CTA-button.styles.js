@@ -30,7 +30,6 @@ export const ButtonWrapper = styled.div.attrs((props) => ({
   box-shadow: 6px 9px 5px rgba(0, 0, 0, 0.25);
   background: rgba(242, 246, 255, 1);
   z-index: 2;
-  visibility: none;
 
   @media (max-width: 980px) {
     &.twt {

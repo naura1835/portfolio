@@ -1,11 +1,11 @@
 export const projectData = [
   {
-    imgSrc: "nh.png",
-    title: "N+H Interiors",
+    imgSrc: "todo.png",
+    title: "Todo App",
     description:
-      "NH interiors is an interior design website meant to give potential customers a glimpse of projects carried out so far and what tp expect if they decide to do business.",
-    techStack: ["Gatsbyjs", "graphql", "Contentful"],
-    url: "https://goofy-swirles-2cbc3c.netlify.app/",
+      "The classic todo app with a few twists! A CRUD app using localstorage which includes a dark/light theme toggle and drag & drop reordering.",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    url: "https://naura1835.github.io/todo/",
   },
   {
     imgSrc: "hatch-gardens.png",

@@ -9,6 +9,7 @@ This is a solution to my personal website, which showcase projects i have worked
 Live site URL: [Khadija Gwarzo](https://www.khadijagwarzo.com/)
 
 ### Tech Stacks Used
+
 - React
 - Styled Components
 - Graphql
@@ -21,6 +22,8 @@ As i have mentioned before i have a passion for design so for all my projects, i
 ## What I Learned
 
 What i learned from this project is making the contact form actually send the email to the specified address. For that i used EmailJS.
+
+Also i learned how to animate parts of an SVG which was fun to work with.
 
 ## Author
 

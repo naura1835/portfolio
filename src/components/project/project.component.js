@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { gsap, Power0 } from "gsap";
+import { gsap, Power0, Power1 } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import {
@@ -46,6 +46,11 @@ const Project = ({ project }) => {
       },
       "s"
     );
+    tl.from(projectRef.children[0].children[1], {
+      duration: 0.5,
+      delay: 0.6,
+      autoAlpha: 0,
+    });
     tl.from(
       projectRef.children[1],
       {
@@ -59,6 +64,13 @@ const Project = ({ project }) => {
     tl.from(projectRef.children[1].children, {
       autoAlpha: 0,
     });
+    gsap.to(projectRef.children[0].children[1], {
+      repeat: -1,
+      yoyo: true,
+      duration: 0.8,
+      y: -2,
+      ease: Power1.easeInOut,
+    });
   });
 
   return (
@@ -69,12 +81,6 @@ const Project = ({ project }) => {
     >
       <ImageWrapper>
         <Projectmage src={require(`../../images/${imgSrc}`).default} />
-      </ImageWrapper>
-      <ProjectDetails>
-        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-          <Title>{title}</Title>
-          <Description>{description}</Description>
-        </div>
         <TechLinkWrapper>
           <a href={url} target="_blank" rel="noreferrer">
             <LinkIcon
@@ -83,7 +89,18 @@ const Project = ({ project }) => {
               }
             />
           </a>
+          <a href={url} target="_blank" rel="noreferrer">
+            <LinkIcon
+              src={require("../../images/icons/codicon_github-alt.svg").default}
+            />
+          </a>
         </TechLinkWrapper>
+      </ImageWrapper>
+      <ProjectDetails>
+        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+          <Title>{title}</Title>
+          <Description>{description}</Description>
+        </div>
       </ProjectDetails>
     </Wrapper>
   );

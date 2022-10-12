@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import { Wrapper, Icon, Title, Line, Details } from "./section.styles";
+import { Wrapper, Icon, Title, Line, Details, Path } from "./section.styles";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,16 +56,9 @@ const Section = ({ iconSrc, altText, title, children }) => {
       >
         <Icon src={require(`../../images/${iconSrc}`).default} alt={altText} />
         <Title>{title}</Title>
-        <div
-          style={{
-            display: "flex",
-            width: "34px",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+        <Path>
           <Line />
-        </div>
+        </Path>
         <Details>{children}</Details>
       </Wrapper>
     </>

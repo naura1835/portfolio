@@ -2,9 +2,11 @@ import styled from "styled-components";
 import { MediumText } from "../../globalStyles/textStyles";
 
 export const Wrapper = styled.header`
-  background-color: #e3e8ff;
+  /* background-color: #e3e8ff; */
   width: 96vw;
   height: 10vh;
+  position: fixed;
+  z-index: 3;
 `;
 export const NavBar = styled.nav`
   margin: 0 auto;

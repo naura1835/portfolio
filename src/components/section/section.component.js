@@ -54,7 +54,7 @@ const Section = ({ iconSrc, altText, title, children }) => {
           sectionRef = el;
         }}
       >
-        <Icon src={require(`../../images/${iconSrc}`).default} alt={altText} />
+        <Icon src={require(`../../images/${iconSrc}`)} alt={altText} />
         <Title>{title}</Title>
         <Path>
           <Line />

@@ -7,7 +7,7 @@ const CTAButton = ({ url, socialIcon, altText, classInfo }) => {
     <ButtonWrapper className={classInfo}>
       <a href={url} target="_blank" rel="noreferrer">
         <SocialIcon
-          src={require(`../../images/${socialIcon}`).default}
+          src={require(`../../images/${socialIcon}`)}
           alt={altText}
         />
       </a>

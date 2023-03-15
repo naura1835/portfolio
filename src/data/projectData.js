@@ -1,6 +1,7 @@
 export const projectData = [
   {
-    imgSrc: "tablet.png",
+    id:0,
+    imgSrc: "career-guidance.png",
     title: "The Career Guide",
     description:
       "A fullstack web application that helps users choose a career path suited for them based on their personality and grades",
@@ -9,6 +10,7 @@ export const projectData = [
     repo: "https://github.com/naura1835/the-career-guide",
   },
   {
+    id: 1,
     imgSrc: "scribbs.png",
     title: "Scribbs",
     description:
@@ -18,15 +20,17 @@ export const projectData = [
     repo: "https://github.com/banjovic/scamp-group-project",
   },
   {
-    imgSrc: "todo.png",
-    title: "Todo App",
+    id: 2,
+    imgSrc: "zeha-photography.png",
+    title: "Zeha Photography",
     description:
-      "The classic todo app with a few twists! A CRUD app using localstorage which includes a dark/light theme toggle and drag & drop reordering.",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    url: "https://naura1835.github.io/todo/",
+      "",
+    techStack: ["Gatsby"],
+    url: "https://zeha-photography.netlify.app/",
     repo: "",
   },
   {
+    id: 3,
     imgSrc: "hatch-gardens.png",
     title: "Hatch Gardens",
     description:
@@ -36,6 +40,7 @@ export const projectData = [
     repo: "",
   },
   {
+    id: 4,
     imgSrc: "zaytun.png",
     title: "Zaytun Foundation",
     description:

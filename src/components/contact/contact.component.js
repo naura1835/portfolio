@@ -9,6 +9,7 @@ import { ContactIntro, Wrapper } from "./contact.styles";
 gsap.registerPlugin(ScrollTrigger);
 const Contact = () => {
   let contactRef = useRef(null);
+
   useEffect(() => {
     const contactIntro = contactRef.children[0];
     const contactForm = contactRef.children[1];

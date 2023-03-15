@@ -14,6 +14,7 @@ export const Wrapper = styled.div.attrs((props) => ({
   justify-content: center;
   align-items: center;
   padding: 10px;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
   /* transition: width 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
 
   &.project-chip {

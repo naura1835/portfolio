@@ -106,7 +106,10 @@ const ProjectPreview = () => {
             projectImage = el;
           }}
         >
-          <img src={require(`../../images/${projectData[index].imgSrc}`)} />
+          <img
+            src={require(`../../images/${projectData[index].imgSrc}`)}
+            loading="eager"
+          />
         </ImageContent>
       </ImageWrapper>
       <ProjectDetails>

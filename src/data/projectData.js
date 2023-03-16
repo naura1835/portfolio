@@ -1,6 +1,6 @@
 export const projectData = [
   {
-    id:0,
+    id: 0,
     imgSrc: "career-guidance.png",
     title: "The Career Guide",
     description:
@@ -24,8 +24,8 @@ export const projectData = [
     imgSrc: "zeha-photography.png",
     title: "Zeha Photography",
     description:
-      "",
-    techStack: ["Gatsby"],
+      "A fun photography website showcasing the world from the perspective of an individual exploring their artistic side",
+    techStack: ["Gatsby", "Strapi"],
     url: "https://zeha-photography.netlify.app/",
     repo: "",
   },
@@ -35,7 +35,7 @@ export const projectData = [
     title: "Hatch Gardens",
     description:
       "Hatch Gardens is an e-commerce platform allowing users to buy plants ranging from indoor plant to office plants.",
-    techStack: ["react", "styled-components"],
+    techStack: ["React", "styled-components"],
     url: "https://loving-blackwell-8bdb2c.netlify.app/",
     repo: "",
   },

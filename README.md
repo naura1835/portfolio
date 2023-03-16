@@ -6,7 +6,7 @@ This is a solution to my personal website, which showcase projects i have worked
 
 ### Links
 
-Live site URL: [Khadija Gwarzo](https://www.khadijagwarzo.com/)
+Live site URL: [Khadija Gwarzo](https://khadija-gwarzo.netlify.app/)
 
 ### Tech Stacks Used
 

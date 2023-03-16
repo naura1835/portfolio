@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
+import { gsap, Power2 } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import { projectData } from "../../data/projectData";
@@ -8,11 +8,11 @@ import { PaginationBtn } from "../custom-button/custom-button.component";
 
 import {
   BtnGroup,
+  ImageContent,
   ImageWrapper,
   InnerWrapper,
   ProjectDescription,
   ProjectDetails,
-  ProjectsWrapper,
   ProjectTitleWrapper,
   TechList,
   TechSpan,
@@ -24,31 +24,70 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ProjectPreview = () => {
   let projectSecRef = useRef(null);
+  let projectImage = useRef(null);
 
   const [index, setIndex] = useState(0);
-
-  console.log("redraw" + index);
 
   const nextProject = () => {
     if (index === projectData.length - 1) return;
     setIndex((previousIndex) => previousIndex + 1);
+
+    gsap.from(projectImage.children, {
+      scale: 0.6,
+      // x: "100%",
+      // autoAlpha: 0,
+      duration: 0.8,
+      transformOrigin: "bottom right",
+      ease: Power2.easeOut,
+    });
   };
 
   const previousProject = () => {
     if (index === 0) return;
     setIndex(index - 1);
+
+    gsap.from(projectImage.children, {
+      scale: 0.6,
+      // x: "100%",
+      // autoAlpha: 0,
+      duration: 0.8,
+      transformOrigin: "bottom center",
+      ease: Power2.easeOut,
+    });
   };
 
   useEffect(() => {
     const projectTitle = projectSecRef.children[0].children[0];
+    const projectDesc = projectSecRef.children[1].children[1];
+    const TechUsed = projectDesc.nextSibling.children[1];
 
     gsap.from(projectTitle.children, {
       scrollTrigger: {
         trigger: projectSecRef,
       },
-      y: 20,
+      y: -20,
       autoAlpha: 0,
       duration: 0.5,
+    });
+
+    gsap.from(projectDesc.children, {
+      scrollTrigger: {
+        trigger: projectSecRef,
+      },
+      y: 100,
+      autoAlpha: 0,
+      duration: 0.8,
+    });
+
+    gsap.from(TechUsed.children, {
+      scrollTrigger: {
+        trigger: projectSecRef,
+      },
+      y: 20,
+      autoAlpha: 0,
+      ease: Power2.easeOut,
+      delay: 0.2,
+      stagger: 0.3,
     });
   });
 
@@ -62,7 +101,13 @@ const ProjectPreview = () => {
         <ProjectTitleWrapper>
           <TechSpan>{projectData[index].title}</TechSpan>
         </ProjectTitleWrapper>
-        <img src={require(`../../images/${projectData[index].imgSrc}`)} />
+        <ImageContent
+          ref={(el) => {
+            projectImage = el;
+          }}
+        >
+          <img src={require(`../../images/${projectData[index].imgSrc}`)} />
+        </ImageContent>
       </ImageWrapper>
       <ProjectDetails>
         <BtnGroup>
@@ -70,7 +115,9 @@ const ProjectPreview = () => {
           <PaginationBtn type="forward" handleClick={nextProject} />
         </BtnGroup>
         <ProjectDescription>
-          {projectData[index].description}
+          <span style={{ display: "inline-block" }}>
+            {projectData[index].description}
+          </span>
         </ProjectDescription>
         <TechStackWrapper>
           <InnerWrapper>
@@ -83,25 +130,6 @@ const ProjectPreview = () => {
           </TechList>
         </TechStackWrapper>
       </ProjectDetails>
-
-      {/* <ProjectsWrapper>
-        {projectData.map((project, index) => (
-          <Fragment key={index}>
-            <TechChip
-              tech={{name: project.title}}
-              className={
-                isActive == project.title
-                  ? "project-chip is-active"
-                  : "project-chip"
-              }
-              handleClick={() => {
-                setIsActive(project.title);
-                setIndex(project.id)
-              }}
-            />
-          </Fragment>
-        ))}
-      </ProjectsWrapper> */}
     </Wrapper>
   );
 };

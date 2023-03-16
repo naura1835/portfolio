@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
+import { gsap, Power1 } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import { Wrapper, Icon, Title, Line, Details, Path } from "./section.styles";
@@ -17,7 +17,8 @@ const Section = ({ iconSrc, altText, title, children }) => {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef,
-        start: "top center",
+        start: "top center+=200",
+        end: "bottom center+=50",
         toggleActions: "play none none none",
       },
     });
@@ -39,11 +40,19 @@ const Section = ({ iconSrc, altText, title, children }) => {
       },
       "s"
     );
-    tl.from(lineRef, {
-      toAlpha: 0,
-      scaleY: 0,
+
+    gsap.to(lineRef.children, {
+      scrollTrigger: {
+        trigger: sectionRef,
+        start: "top center+=200",
+        end: "bottom center+=50",
+        scrub: 1,
+        toggleActions: "play none none none",
+      },
+      height: "100%",
       transformOrigin: "top",
-      delay: 0.4,
+      ease: Power1.easeInOut,
+      delay: 0.2,
     });
   });
 

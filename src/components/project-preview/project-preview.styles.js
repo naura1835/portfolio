@@ -10,6 +10,12 @@ export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 60px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 30px;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -24,13 +30,29 @@ export const ImageWrapper = styled.div`
   align-items: center;
   justify-content: flex-end;
 
+  @media (max-width: 900px) {
+    align-self: center;
+    max-width: 500px;
+  }
+`;
+
+export const ImageContent = styled.div`
+  max-height: 230px;
+  /* max-width: 600px; */
+  height: 100%;
+  width: 100%;
+  object-fit: 100% 100%;
+  object-position: top center;
+  overflow: hidden;
+
   img {
-    max-height: 300px;
-    /* max-width: 600px; */
     height: 100%;
     width: 100%;
     object-fit: 100% 100%;
     object-position: top center;
+  }
+  @media (max-width: 900px) {
+    height: 300px;
   }
 `;
 
@@ -61,11 +83,21 @@ export const ProjectDetails = styled.section`
   flex-direction: column;
   justify-content: space-evenly;
   height: 300px;
+
+  @media (max-width: 900px) {
+    height: auto;
+    gap: 20px;
+  }
 `;
 
 export const ProjectDescription = styled(MediumText)`
   width: 90%;
   margin-bottom: 30px;
+  overflow: hidden;
+
+  @media (max-width: 900px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const BtnGroup = styled.div`
@@ -75,24 +107,6 @@ export const BtnGroup = styled.div`
   gap: 20px;
 `;
 
-export const ProjectsWrapper = styled.section`
-  justify-self: start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  /* width: 10rem; */
-  /* div {
-    max-width: 500px;
-    width: 10rem;
-  }
-  .is-active {
-    width: 12rem !important;
-  }
-  .is-active > div {
-    background-color: rgba(171, 135, 255, 1);
-  } */
-`;
 export const TechSpan = styled(CaptionText)`
   align-self: flex-start;
   color: rgba(26, 33, 81, 1);

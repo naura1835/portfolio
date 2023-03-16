@@ -35,7 +35,7 @@ const ProjectPreview = () => {
     gsap.from(projectImage.children, {
       scale: 0.6,
       // x: "100%",
-      // autoAlpha: 0,
+      autoAlpha: 0,
       duration: 0.8,
       delay: 0.2,
       transformOrigin: "bottom right",
@@ -50,7 +50,7 @@ const ProjectPreview = () => {
     gsap.from(projectImage.children, {
       scale: 0.6,
       // x: "100%",
-      // autoAlpha: 0,
+      autoAlpha: 0,
       duration: 0.8,
       transformOrigin: "bottom center",
       ease: Power2.easeOut,

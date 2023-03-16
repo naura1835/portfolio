@@ -37,6 +37,7 @@ const ProjectPreview = () => {
       // x: "100%",
       // autoAlpha: 0,
       duration: 0.8,
+      delay: 0.2,
       transformOrigin: "bottom right",
       ease: Power2.easeOut,
     });

@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
   grid-template-rows: repeat(2, auto);
   column-gap: 10px;
 `;
+
 export const Icon = styled.img`
   justify-self: center;
   align-self: center;
@@ -22,23 +23,27 @@ export const Icon = styled.img`
     inset 0px 0px 0px 0.5px rgba(26, 33, 81, 0.5); */
   }
 `;
+
 export const Title = styled(H3)`
   grid-area: title;
   text-transform: uppercase;
   color: rgba(26, 33, 81, 0.7);
 `;
+
 export const Path = styled.div`
   display: flex;
   width: 2px;
   height: 100%;
   justify-self: center;
   justify-content: center;
-  background: rgba(26, 33, 81, 0.25);
+  /* background: rgba(26, 33, 81, 0.25); */
+  background-color: transparent;
   border-radius: 10px;
 `;
+
 export const Line = styled.span`
-  width: 1px;
-  height: 100%;
+  width: 100%;
+  height: 0%;
   background: rgba(26, 33, 81, 0.7);
 `;
 export const Details = styled.section`

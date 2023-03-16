@@ -10,11 +10,11 @@ const About = () => {
     gsap.from(aboutRef, {
       scrollTrigger: {
         trigger: aboutRef,
-        start: "top center",
+        start: "top center_=200",
       },
       autoAlpha: 0,
       x: 20,
-      delay: 0.8,
+      delay: 0.2,
     });
   });
   return (
@@ -24,18 +24,29 @@ const About = () => {
       }}
     >
       <Description>
-        A front end developer building captivating user interfaces that keep
-        users engaged while offering reliable solutions from concept to design
-        and finally development phase. I'm constantly looking for opportunities
-        to learn new thing and gain experiences while putting what i've learnt
-        into action.
+        Hello there! I am a front end developer who loves building captivating
+        user interfaces that keep users engaged while offering reliable
+        solutions from concept to design and finally development phase. I'm
+        always striving to learn more, improve my skills and gain experiences
+        while putting what i've learnt into action.
       </Description>
       <Description>
-        I am a very outgoing person who is passionate about programming among
-        other things, when i am not behind a computer screen you'd find me in
-        the kitchen doing what i love which is baking. I am also an ARMY (BTS
-        fan) so that should tell you about how determined i am.
+        While programming is my first love, I also have an eye for design. I
+        love to dabble in creating user interfaces and experimenting with
+        different color schemes and layouts. I often find myself browsing
+        through websites just to admire their design and functionality.
       </Description>
+      <Description>
+        When I'm not writing code or designing UIs, I love to explore my other
+        passion which is baking. There's something magical about mixing
+        ingredients together and watching them transform into delicious treats
+        (yes i have a sweet tooth).
+      </Description>
+      {/* <Description>
+        I am excited to continue to learn, explore, and create with programming,
+        design, and baking. Thank you for taking the time to learn a bit about
+        me.
+      </Description> */}
     </Wrapper>
   );
 };

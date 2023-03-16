@@ -2,11 +2,16 @@ import React from "react";
 
 import { TechImage, TechName, Wrapper } from "./tech-chip.styles";
 
-const TechChip = ({ tech }) => {
+const TechChip = ({ tech, className, handleClick }) => {
   const { techIcon, name } = tech;
+
   return (
-    <Wrapper>
-      <TechImage src={require(`../../images/icons/tech/${techIcon}`).default} />
+    <Wrapper className={className} onClick={handleClick}>
+      {techIcon && (
+        <TechImage
+          src={require(`../../images/icons/tech/${techIcon}`)}
+        />
+      )}
       <TechName>{name}</TechName>
     </Wrapper>
   );

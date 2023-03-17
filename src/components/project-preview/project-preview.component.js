@@ -37,7 +37,7 @@ const ProjectPreview = () => {
       // x: "100%",
       autoAlpha: 0,
       duration: 0.8,
-      delay: 0.2,
+      delay: 0.4,
       transformOrigin: "bottom right",
       ease: Power2.easeOut,
     });
@@ -100,7 +100,9 @@ const ProjectPreview = () => {
     >
       <ImageWrapper>
         <ProjectTitleWrapper>
-          <TechSpan>{projectData[index].title}</TechSpan>
+          <TechSpan>
+            <a href={projectData[index].url}>{projectData[index].title}</a>
+          </TechSpan>
         </ProjectTitleWrapper>
         <ImageContent
           ref={(el) => {

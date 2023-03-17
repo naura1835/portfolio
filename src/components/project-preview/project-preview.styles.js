@@ -111,6 +111,10 @@ export const TechSpan = styled(CaptionText)`
   align-self: flex-start;
   color: rgba(26, 33, 81, 1);
   font-weight: 500;
+
+  a {
+    cursor: pointer;
+  }
 `;
 
 export const TechStackWrapper = styled.div`

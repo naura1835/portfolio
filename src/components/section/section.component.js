@@ -1,10 +1,11 @@
 import React, { useRef, useEffect } from "react";
 import { gsap, Power1 } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import MotionPathPlugin from "gsap/MotionPathPlugin";
 
 import { Wrapper, Icon, Title, Line, Details, Path } from "./section.styles";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 const Section = ({ iconSrc, altText, title, children }) => {
   let sectionRef = useRef(null);
@@ -53,6 +54,7 @@ const Section = ({ iconSrc, altText, title, children }) => {
       transformOrigin: "top",
       ease: Power1.easeInOut,
       delay: 0.2,
+      // motionPath: lineRef,
     });
   });
 

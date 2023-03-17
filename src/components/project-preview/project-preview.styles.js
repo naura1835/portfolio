@@ -44,12 +44,14 @@ export const ImageContent = styled.div`
   object-fit: 100% 100%;
   object-position: top center;
   overflow: hidden;
+  background-color: rgba(26, 33, 81, 0.15);
 
   img {
     height: 100%;
     width: 100%;
     object-fit: 100% 100%;
     object-position: top center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
   @media (max-width: 900px) {
     height: 300px;

@@ -1,13 +1,13 @@
 export const projectData = [
   {
     id: 0,
-    imgSrc: "career-guidance.png",
-    title: "The Career Guide",
+    imgSrc: "zeha-photography.png",
+    title: "Zeha Photography",
     description:
-      "A fullstack web application that helps users choose a career path suited for them based on their personality and grades",
-    techStack: ["SCSS", "EJS", "Node.Js", "Express", "MongoDB"],
-    url: "https://the-career-guide.herokuapp.com/",
-    repo: "https://github.com/naura1835/the-career-guide",
+      "A fun photography website showcasing the world from the perspective of an individual exploring their artistic side",
+    techStack: ["Gatsby", "Strapi"],
+    url: "https://zeha-photography.netlify.app/",
+    repo: "",
   },
   {
     id: 1,
@@ -21,16 +21,6 @@ export const projectData = [
   },
   {
     id: 2,
-    imgSrc: "zeha-photography.png",
-    title: "Zeha Photography",
-    description:
-      "A fun photography website showcasing the world from the perspective of an individual exploring their artistic side",
-    techStack: ["Gatsby", "Strapi"],
-    url: "https://zeha-photography.netlify.app/",
-    repo: "",
-  },
-  {
-    id: 3,
     imgSrc: "hatch-gardens.png",
     title: "Hatch Gardens",
     description:
@@ -38,6 +28,16 @@ export const projectData = [
     techStack: ["React", "styled-components"],
     url: "https://loving-blackwell-8bdb2c.netlify.app/",
     repo: "",
+  },
+  {
+    id: 3,
+    imgSrc: "career-guidance.png",
+    title: "The Career Guide",
+    description:
+      "A fullstack web application that helps users choose a career path suited for them based on their personality and grades",
+    techStack: ["SCSS", "EJS", "Node.Js", "Express", "MongoDB"],
+    url: "https://the-career-guide.herokuapp.com/",
+    repo: "https://github.com/naura1835/the-career-guide",
   },
   {
     id: 4,

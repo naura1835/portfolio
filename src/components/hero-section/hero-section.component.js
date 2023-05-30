@@ -148,7 +148,7 @@ const HeroSection = () => {
               classInfo="github"
             />
             <CTAButton
-              url="https://www.linkedin.com/in/khadija-garba-6257a4201"
+              url="https://www.linkedin.com/in/khadija-gwarzo"
               socialIcon="icons/ant-design_linkedin-filled.svg"
               altText="LinkedIn icon"
               classInfo="linkedIn"

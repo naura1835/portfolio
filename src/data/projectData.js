@@ -36,17 +36,17 @@ export const projectData = [
     description:
       "A fullstack web application that helps users choose a career path suited for them based on their personality and grades",
     techStack: ["SCSS", "EJS", "Node.Js", "Express", "MongoDB"],
-    url: "https://the-career-guide.herokuapp.com/",
+    url: "https://the-career-guide.onrender.com/",
     repo: "https://github.com/naura1835/the-career-guide",
   },
-  {
-    id: 4,
-    imgSrc: "zaytun.png",
-    title: "Zaytun Foundation",
-    description:
-      "A humanitarian website aimed at providing an insight of what the foundation is all about, including their skills acquisition program.",
-    techStack: ["HTML", "CSS", "javascript", "PHP"],
-    url: "https://zaytunfoundation.com.ng",
-    repo: "",
-  },
+  // {
+  //   id: 4,
+  //   imgSrc: "zaytun.png",
+  //   title: "Zaytun Foundation",
+  //   description:
+  //     "A humanitarian website aimed at providing an insight of what the foundation is all about, including their skills acquisition program.",
+  //   techStack: ["HTML", "CSS", "javascript", "PHP"],
+  //   url: "https://zaytunfoundation.com.ng",
+  //   repo: "",
+  // },
 ];

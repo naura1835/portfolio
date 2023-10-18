@@ -3,7 +3,6 @@ import { gsap, Power2, Power4 } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import { projectData } from "../../data/projectData";
-// import Project from "../project/project.component";
 import { PaginationBtn } from "../custom-button/custom-button.component";
 
 import {
@@ -32,9 +31,7 @@ const ProjectPreview = () => {
   const nextProject = () => {
     if (index === projectData.length - 1) return;
 
-    setTimeout(() => {
-      setIndex(index + 1);
-    }, 200);
+    setIndex(index + 1);
 
     gsap.to(projectTitleRef.children, {
       keyframes: [
@@ -42,16 +39,6 @@ const ProjectPreview = () => {
         { autoAlpha: 0 },
         { y: -20 },
         { y: 0, autoAlpha: 1, ease: Power4.easeOut },
-      ],
-      duration: 0.8,
-    });
-
-    gsap.to(projectImage.children, {
-      ease: Power4.easeOut,
-      keyframes: [
-        { clipPath: "polygon(20% 35%, 80% 35%, 80% 65%, 20% 65%)" },
-        { clipPath: "polygon(20% 50%, 80% 50%, 80% 50%, 20% 50%)" },
-        { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" },
       ],
       duration: 0.8,
     });
@@ -60,9 +47,7 @@ const ProjectPreview = () => {
   const previousProject = () => {
     if (index === 0) return;
 
-    setTimeout(() => {
-      setIndex(index - 1);
-    }, 200);
+    setIndex(index - 1);
 
     gsap.to(projectTitleRef.children, {
       keyframes: [
@@ -70,16 +55,6 @@ const ProjectPreview = () => {
         { autoAlpha: 0 },
         { y: -20 },
         { y: 0, autoAlpha: 1, ease: Power4.easeOut },
-      ],
-      duration: 0.8,
-    });
-
-    gsap.to(projectImage.children, {
-      ease: Power4.easeOut,
-      keyframes: [
-        { clipPath: "polygon(20% 35%, 80% 35%, 80% 65%, 20% 65%)" },
-        { clipPath: "polygon(20% 50%, 80% 50%, 80% 50%, 20% 50%)" },
-        { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" },
       ],
       duration: 0.8,
     });
@@ -106,12 +81,6 @@ const ProjectPreview = () => {
       delay: 0.2,
       ease: Power4.easeOut,
       clipPath: "polygon(20% 50%, 80% 50%, 80% 50%, 20% 50%)",
-      // keyframes: [
-      //   // { clipPath: "polygon(20% 50%, 80% 50%, 80% 50%, 20% 50%)" },
-      //   { clipPath: "polygon(20% 35%, 80% 35%, 80% 65%, 20% 65%)" },
-      //   // { clipPath: "polygon(10% 15%, 90% 15%, 90% 85%, 10% 85%)" },
-      //   { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" },
-      // ],
     });
   }, []);
 
@@ -168,7 +137,6 @@ const ProjectPreview = () => {
         >
           <img
             src={require(`../../images/${projectData[index].imgSrc}`)}
-            loading="eager"
             alt={`${projectData[index].title} website screenshot`}
           />
         </ImageContent>

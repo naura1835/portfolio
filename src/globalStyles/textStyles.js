@@ -72,7 +72,7 @@ export const SmallMediumText = styled.p`
   line-height: 20px;
 `;
 export const CaptionText = styled.span`
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 18px;
   font-family: "Roboto";
 `;

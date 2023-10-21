@@ -31,18 +31,26 @@ const Header = () => {
           </div>
         </HamburgerMenu>
 
-        <Menu menu={menu} className={menu && "menu--active"}>
+        <Menu menu={menu}>
           <MenuItem>
-            <a href="/#home">Home</a>
+            <a href="/#home" className={menu && "menu-item--active"}>
+              Home
+            </a>
           </MenuItem>
           <MenuItem>
-            <a href="/#about">About</a>
+            <a href="/#about" className={menu && "menu-item--active"}>
+              About
+            </a>
           </MenuItem>
           <MenuItem>
-            <a href="/#projects">Projects</a>
+            <a href="/#projects" className={menu && "menu-item--active"}>
+              Projects
+            </a>
           </MenuItem>
           <MenuItem>
-            <a href="/#contact">Contact Us</a>
+            <a href="/#contact" className={menu && "menu-item--active"}>
+              Contact Us
+            </a>
           </MenuItem>
         </Menu>
       </NavBar>

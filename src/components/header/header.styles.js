@@ -94,27 +94,31 @@ export const Line = styled.span`
   }
 `;
 
-export const MenuItem = styled.li`
+export const MenuItem = styled.li.attrs((props) => ({
+  className: props.className,
+}))`
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.25rem;
 
   > a {
     color: #fff;
+    opacity: 0;
+
+    &.menu-item--active {
+      opacity: 1;
+      transition: opacity 0.8s linear;
+    }
   }
 `;
 
-export const Menu = styled.ul.attrs((props) => ({
-  className: props.className,
-}))`
+export const Menu = styled.ul`
+  position: absolute;
+  top: 100%;
   list-style-type: none;
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 1.25rem;
   padding: 1rem;
   margin-bottom: 1.5rem;
-
-  &.menu--active {
-    display: flex;
-  }
 `;

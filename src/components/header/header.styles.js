@@ -1,86 +1,124 @@
 import styled from "styled-components";
-import { MediumText } from "../../globalStyles/textStyles";
 
 export const Wrapper = styled.header`
-  /* background-color: #e3e8ff; */
-  width: 96vw;
+  width: 100%;
   height: 10vh;
   position: fixed;
   z-index: 3;
-`;
-export const NavBar = styled.nav`
-  margin: 0 auto;
-  width: 100%;
   padding: 1.45rem 1.0875rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+`;
 
-  @media (max-width: 490px) {
+export const BackgroundWrapper = styled.div.attrs((props) => ({
+  className: props.className,
+}))`
+  position: absolute;
+  right: 1%;
+  max-width: 9.375rem;
+  width: 100%;
+  height: 3rem;
+  background-color: #ab87ff;
+  border-radius: 1.875rem;
+  z-index: -1;
+  transition: max-width 0.8s cubic-bezier(0.3, 1.1, 0.64, 1),
+    height 0.8s cubic-bezier(0.3, 1.1, 0.64, 1);
+  transform-origin: left;
+
+  &.bg--active {
+    max-width: 17.625rem;
+    height: 16.625rem;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
-    position: relative;
+    justify-content: space-between;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    transition: max-width 0.8s cubic-bezier(0.3, 1.1, 0.64, 1),
+      height 0.8s cubic-bezier(0.3, 1.1, 0.64, 1);
+    transform-origin: center, center;
   }
 `;
+
+export const NavBar = styled.nav.attrs((props) => ({
+  className: props.className,
+}))`
+  position: relative;
+  float: right;
+  max-width: 9.375rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #ab87ff;
+  border-radius: 1.875rem;
+  color: #fff;
+  padding: 1rem;
+
+  &.nav-bar--active {
+    max-width: 15.625rem;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: max-width 0.8s cubic-bezier(0.3, 1.1, 0.64, 1);
+    transform-origin: center;
+  }
+`;
+
 export const HamburgerMenu = styled.div`
-  display: none;
-  @media (max-width: 490px) {
-    display: block;
-    z-index: 50;
-  }
+  position: relative;
+  display: flex;
+  justify-content: ${(props) => (props.menu ? "flex-end" : "center")};
+  align-items: center;
+  gap: 20px;
 `;
+
 export const Line = styled.span`
   display: block;
   height: 2px;
   margin: 5px 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #fff;
 
   :nth-child(1) {
     width: 30px;
+
+    transition: all 0.3s cubic-bezier(0.3, 1.1, 0.64, 1);
+    background-color: ${(props) => (props.menu ? "transparent" : "#fff")};
   }
   :nth-child(2) {
     width: 20px;
+    transition: all 0.3s cubic-bezier(0.3, 1.1, 0.64, 1);
+    transform: ${(props) =>
+      props.menu ? "rotate(45deg) translate(28%, 50%)" : ""};
   }
   :nth-child(3) {
-    width: 15px;
+    transition: all 0.3s cubic-bezier(0.3, 1.1, 0.64, 1);
+    width: ${(props) => (props.menu ? "20px" : "15px")};
+    transform: ${(props) =>
+      props.menu ? "rotate(-45deg) translate(16%, 5%)" : ""};
   }
 `;
-export const Menu = styled.div`
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 
-  @media (max-width: 769px) {
-    width: 80%;
-  }
-  @media (max-width: 490px) {
-    position: absolute;
-    top: 60px;
-    flex-direction: column;
-    align-items: center;
-    padding: 4vh 0;
-    width: 40vw;
-    background-color: rgba(242, 246, 255, 1);
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    display: ${(props) => (props.menu ? "flex" : "none")};
-    z-index: 3;
-  }
-`;
-export const MenuItem = styled(MediumText)`
-  &:hover > a {
-    color: #8352fd;
-  }
-  &:not(:last-child) {
-    margin-right: 2rem;
-  }
+export const MenuItem = styled.li.attrs((props) => ({
+  className: props.className,
+}))`
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25rem;
 
-  @media (max-width: 490px) {
-    &:not(:last-child) {
-      margin-bottom: 2rem;
-      margin-right: 0;
+  > a {
+    color: #fff;
+    opacity: 0;
+
+    &.menu-item--active {
+      opacity: 1;
+      transition: opacity 0.8s linear;
     }
   }
+`;
+
+export const Menu = styled.ul`
+  position: absolute;
+  top: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
 `;

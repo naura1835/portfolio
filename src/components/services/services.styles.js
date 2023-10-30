@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BodyMainText, H2 } from "../../globalStyles/textStyles";
+import { BodyMainText, Heading2 } from "../../globalStyles/textStyles";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -44,7 +44,7 @@ export const ServiceWrapper = styled.div`
     margin: 0;
   }
 `;
-export const Title = styled(H2)`
+export const Title = styled(Heading2)`
   color: #fff;
   width: 16ch;
 `;

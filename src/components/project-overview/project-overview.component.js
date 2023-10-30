@@ -47,24 +47,48 @@ const ProjectOverview = () => {
   };
 
   useLayoutEffect(() => {
-    gsap.set(carouselRef.current, {
-      display: "flex",
-      height: "80vh",
-    });
+    let matchMedia = gsap.matchMedia();
 
-    gsap.to(gsap.utils.toArray(".project"), {
-      xPercent: -100 * (gsap.utils.toArray(".project").length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: projectsRef.current,
-        pin: true,
-        scrub: 1,
-        end: "+=3000",
-        markers: true,
-        toggleActions: "play pause reverse none",
-      },
+    matchMedia.add("(min-width: 900px)", () => {
+      gsap.set(carouselRef.current, {
+        display: "flex",
+        height: "80vh",
+      });
+
+      gsap.to(gsap.utils.toArray(".project"), {
+        xPercent: -100 * (gsap.utils.toArray(".project").length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: projectsRef.current,
+          pin: true,
+          scrub: 1,
+          end: "+=3000",
+          markers: true,
+          toggleActions: "play pause reverse none",
+        },
+      });
+
+      gsap.matchMedia("(min-width: 900px)", () => {
+        gsap.set(carouselRef.current, {
+          display: "flex",
+          height: "80vh",
+        });
+
+        gsap.to(gsap.utils.toArray(".project"), {
+          xPercent: -100 * (gsap.utils.toArray(".project").length - 1),
+          ease: "none",
+          scrollTrigger: {
+            trigger: projectsRef.current,
+            pin: true,
+            scrub: 1,
+            end: "+=3000",
+            markers: true,
+            toggleActions: "play pause reverse none",
+          },
+        });
+      });
     });
-  }, []);
+  });
 
   return (
     <Wrapper ref={projectsRef}>

@@ -1,14 +1,13 @@
-// import { gsap, Power2, Power4 } from "gsap";
+import { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import { useEffect, useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
 import { projectData } from "../../data/projectData";
-import { Display, Heading2, MediumText } from "../../globalStyles/textStyles";
 
 import ForwardBtn from "../../images/icons/material-symbols_arrow-forward-rounded.svg";
 import BackBtn from "../../images/icons/material-symbols_arrow-back.svg";
 
+import { Display, Heading2, MediumText } from "../../globalStyles/textStyles";
 import {
   ImageWrapper,
   Project,

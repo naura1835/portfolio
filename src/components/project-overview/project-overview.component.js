@@ -63,7 +63,6 @@ const ProjectOverview = () => {
           pin: true,
           scrub: 1,
           end: "+=3000",
-          markers: true,
           toggleActions: "play pause reverse none",
         },
       });

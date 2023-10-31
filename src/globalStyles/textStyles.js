@@ -1,76 +1,74 @@
 import styled from "styled-components";
+import { breakpointsUp } from "./breakpoints";
 
-export const Display = styled.h1`
-  font-size: 70px;
+export const Display = styled.h2`
+  font-size: 2.8rem;
   font-weight: bold;
   font-family: "Roboto";
 
-  @media (max-width: 995px) {
-    font-size: 60px;
+  @media ${breakpointsUp["tablet-landscape-up"]} {
+    font-size: 3.75rem;
   }
-  @media (max-width: 784px) {
-    font-size: 50px;
+  @media ${breakpointsUp["tablet-portrait-up"]} {
+    font-size: 3rem;
   }
-
-  @media (max-width: 450px) {
-    font-size: 48px;
-  }
-
-  @media (max-width: 414px) {
-    font-size: 34px;
+  @media ${breakpointsUp["desktop-up"]} {
+    font-size: 4.375rem;
   }
 `;
+
 export const Heading1 = styled.h1`
-  font-size: 48px;
+  font-size: 2.5rem;
   font-weight: bold;
   font-family: "Roboto";
 
-  @media (max-width: 480px) {
-    font-size: 40px;
-  }
-  @media (max-width: 414px) {
-    font-size: 22px;
+  @media ${breakpointsUp["tablet-portrait-up"]} {
+    font-size: 3rem;
   }
 `;
-export const H2 = styled.h2`
-  font-size: 38px;
+
+export const Heading2 = styled.h2`
+  font-size: 1.5rem;
   font-weight: 500;
   font-family: "Roboto";
 
-  @media (max-width: 414px) {
-    font-size: 24px;
-    font-weight: 600;
+  @media ${breakpointsUp["tablet-portrait-up"]} {
+    font-size: 2.375rem;
   }
 `;
 export const H3 = styled.h3`
-  font-size: 24px;
+  font-size: 1.25rem;
   font-weight: bold;
   font-family: "Roboto";
 
-  @media (max-width: 414px) {
-    font-size: 20px;
+  @media ${breakpointsUp["tablet-portrait-up"]} {
+    font-size: 1.5rem;
   }
 `;
+
 export const BodyIntroText = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: "Roboto";
 `;
+
 export const BodyMainText = styled.p`
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 130%;
   font-family: "Roboto";
 `;
+
 export const MediumText = styled.p`
-  font-size: 17px;
-  ${"" /* font-family: Arial, Helvetica, sans-serif;  */}
+  font-size: 1.0625rem;
   font-family: "Roboto";
   line-height: 130%;
 `;
+
 export const SmallMediumText = styled.p`
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 20px;
 `;
+
 export const CaptionText = styled.span`
   font-size: 0.9375rem;
   line-height: 18px;

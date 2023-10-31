@@ -20,11 +20,11 @@ const Header = () => {
         onClick={() => {
           SetMenu(!menu);
         }}
-        className={menu && "nav-bar--active"}
+        className={menu ? "nav-bar--active" : undefined}
       >
         <HamburgerMenu menu={menu}>
           <CaptionText style={{ display: menu && "none" }}>Menu</CaptionText>
-          <div className={menu && "menu-icon--active"}>
+          <div className={menu ? "menu-icon--active" : undefined}>
             <Line menu={menu}></Line>
             <Line menu={menu}></Line>
             <Line menu={menu}></Line>
@@ -33,28 +33,37 @@ const Header = () => {
 
         <Menu menu={menu}>
           <MenuItem>
-            <a href="/#home" className={menu && "menu-item--active"}>
+            <a href="/#home" className={menu ? "menu-item--active" : undefined}>
               Home
             </a>
           </MenuItem>
           <MenuItem>
-            <a href="/#about" className={menu && "menu-item--active"}>
+            <a
+              href="/#about"
+              className={menu ? "menu-item--active" : undefined}
+            >
               About
             </a>
           </MenuItem>
           <MenuItem>
-            <a href="/#projects" className={menu && "menu-item--active"}>
+            <a
+              href="/#projects"
+              className={menu ? "menu-item--active" : undefined}
+            >
               Projects
             </a>
           </MenuItem>
           <MenuItem>
-            <a href="/#contact" className={menu && "menu-item--active"}>
+            <a
+              href="/#contact"
+              className={menu ? "menu-item--active" : undefined}
+            >
               Contact Us
             </a>
           </MenuItem>
         </Menu>
       </NavBar>
-      <BackgroundWrapper className={menu && "bg--active"} />
+      <BackgroundWrapper className={menu ? "bg--active" : undefined} />
     </Wrapper>
   );
 };

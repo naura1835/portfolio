@@ -20,8 +20,7 @@ body {
   color: #000000;
 }
 main {
-  padding: 2vh 5vw;
-  padding-bottom: 5vh;
+  padding: 2vh 0 5vh;
 }
 a {
   text-decoration: none;

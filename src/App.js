@@ -6,7 +6,7 @@ import BackgroundAnimation from "./components/background-animation/background-an
 import Contact from "./components/contact/contact.component";
 import Header from "./components/header/header.component";
 import HeroSection from "./components/hero-section/hero-section.component";
-import ProjectPreview from "./components/project-preview/project-preview.component";
+import ProjectOverview from "./components/project-overview/project-overview.component";
 import Section from "./components/section/section.component";
 import Services from "./components/services/services.component";
 import TechStack from "./components/tech-stack/tech-stack.components";
@@ -38,6 +38,9 @@ const App = () => {
         <BackgroundAnimation />
       </div>
       <main>
+        <div id="projects" />
+        <ProjectOverview />
+
         <div id="about" />
         <Section
           iconSrc="icons/line-md_account-small.svg"
@@ -52,15 +55,6 @@ const App = () => {
           title="Services"
         >
           <Services />
-        </Section>
-        <div id="projects" />
-        <Section
-          iconSrc="icons/akar-icons_folder.svg"
-          altText="folder icon"
-          title="Projects"
-          id="projects"
-        >
-          <ProjectPreview />
         </Section>
         <Section
           iconSrc="icons/ph_stack-light.svg"

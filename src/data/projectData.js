@@ -7,7 +7,7 @@ export const projectData = [
       "A fun photography website showcasing the world from the perspective of an individual exploring their artistic side",
     techStack: ["Gatsby", "Strapi"],
     url: "https://zeha-photography.netlify.app/",
-    repo: "",
+    repo: "https://github.com/naura1835/zeha-photography",
   },
   {
     id: 1,
@@ -39,14 +39,14 @@ export const projectData = [
     url: "https://the-career-guide.onrender.com/",
     repo: "https://github.com/naura1835/the-career-guide",
   },
-  // {
-  //   id: 4,
-  //   imgSrc: "zaytun.png",
-  //   title: "Zaytun Foundation",
-  //   description:
-  //     "A humanitarian website aimed at providing an insight of what the foundation is all about, including their skills acquisition program.",
-  //   techStack: ["HTML", "CSS", "javascript", "PHP"],
-  //   url: "https://zaytunfoundation.com.ng",
-  //   repo: "",
-  // },
+  {
+    id: 4,
+    imgSrc: "zaytun.png",
+    title: "Zaytun Foundation",
+    description:
+      "A humanitarian website aimed at providing an insight of what the foundation is all about, including their skills acquisition program.",
+    techStack: ["HTML", "CSS", "javascript", "PHP"],
+    url: "https://zaytunfoundation.com.ng",
+    repo: "",
+  },
 ];

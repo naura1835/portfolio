@@ -7,7 +7,6 @@ import Contact from "./components/contact/contact.component";
 import Header from "./components/header/header.component";
 import HeroSection from "./components/hero-section/hero-section.component";
 import ProjectOverview from "./components/project-overview/project-overview.component";
-import Section from "./components/section/section.component";
 
 import "./App.css";
 
@@ -43,14 +42,7 @@ const App = () => {
         <About />
 
         <div id="contact" />
-        <Section
-          iconSrc="icons/fluent_contact-card-20-regular.svg"
-          altText="contact card icon"
-          title="Contact"
-          id="contact"
-        >
-          <Contact />
-        </Section>
+        <Contact />
       </main>
     </div>
   );

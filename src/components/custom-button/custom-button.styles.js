@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
 export const ButtonWrapper = styled.button`
-  //   height: 48px;
   width: fit-content;
   background-color: transparent;
-  //   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,14 +21,4 @@ export const ButtonWrapper = styled.button`
     color: #fff;
     border-color: transparent;
   }
-`;
-
-export const PgnBtn = styled.button`
-  width: 30px;
-  height: 26px;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  background-color: rgba(26, 33, 81, 0.25);
-  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
 `;

@@ -1,35 +1,14 @@
-import React from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+import { CONTACT_DATA } from "../../data/contactData";
 import ContactForm from "../contact-form/contact-form.component";
 
 import { ContactIntro, Wrapper } from "./contact.styles";
 import { BodyMainText, Display } from "../../globalStyles/textStyles";
 
 gsap.registerPlugin(ScrollTrigger);
-const CONTACT_DATA = [
-  {
-    url: "twitter.com/NauraCodes",
-    imgSrc: "iconoir_twitter.svg",
-    altText: "Twitter icon",
-  },
-  {
-    url: "github.com/naura1835",
-    imgSrc: "codicon_github-alt.svg",
-    altText: "Github icon",
-  },
-  {
-    url: "www.linkedin.com/in/khadija-garba-6257a4201",
-    imgSrc: "ph_linkedin-logo.svg",
-    altText: "LinkedIn icon",
-  },
-  {
-    url: "mailto:khadijagarbag@gmail.com",
-    imgSrc: "carbon_email.svg",
-    altText: "Email icon",
-  },
-];
+
 const Contact = () => {
   return (
     <Wrapper aria-labelledby="contact-heading">

@@ -9,6 +9,7 @@ import HeroSection from "./components/hero-section/hero-section.component";
 import ProjectOverview from "./components/project-overview/project-overview.component";
 
 import "./App.css";
+import Articles from "./components/articles/articles.component";
 
 const App = () => {
   let appRef = useRef(null);
@@ -40,6 +41,9 @@ const App = () => {
 
         <div id="about" />
         <About />
+
+        <div id="articles" />
+        <Articles />
 
         <div id="contact" />
         <Contact />

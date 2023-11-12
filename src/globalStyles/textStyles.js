@@ -36,7 +36,7 @@ export const Heading2 = styled.h2`
     font-size: 2.375rem;
   }
 `;
-export const H3 = styled.h3`
+export const Heading3 = styled.h3`
   font-size: 1.25rem;
   font-weight: bold;
   font-family: "Roboto";

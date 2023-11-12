@@ -13,7 +13,6 @@ export const Wrapper = styled.form`
   max-width: 480px;
   width: 100%;
   height: auto;
-  z-index: 10;
   margin-inline: auto;
 `;
 

@@ -11,6 +11,13 @@ import {
   Wrapper,
 } from "./header.styles";
 
+const MENU_DATA = [
+  { url: "/#about", title: "About" },
+  { url: "/#projects", title: "Projects" },
+  { url: "/#articles", title: "Articles" },
+  { url: "/#contact", title: "Contact Us" },
+];
+
 const Header = () => {
   const [menu, SetMenu] = useState(false);
 
@@ -32,35 +39,16 @@ const Header = () => {
         </HamburgerMenu>
 
         <Menu menu={menu}>
-          <MenuItem>
-            <a href="/#home" className={menu ? "menu-item--active" : undefined}>
-              Home
-            </a>
-          </MenuItem>
-          <MenuItem>
-            <a
-              href="/#about"
-              className={menu ? "menu-item--active" : undefined}
-            >
-              About
-            </a>
-          </MenuItem>
-          <MenuItem>
-            <a
-              href="/#projects"
-              className={menu ? "menu-item--active" : undefined}
-            >
-              Projects
-            </a>
-          </MenuItem>
-          <MenuItem>
-            <a
-              href="/#contact"
-              className={menu ? "menu-item--active" : undefined}
-            >
-              Contact Us
-            </a>
-          </MenuItem>
+          {MENU_DATA.map((menuItem, index) => (
+            <MenuItem key={index}>
+              <a
+                href={menuItem.url}
+                className={menu ? "menu-item--active" : undefined}
+              >
+                {menuItem.title}
+              </a>
+            </MenuItem>
+          ))}
         </Menu>
       </NavBar>
       <BackgroundWrapper className={menu ? "bg--active" : undefined} />

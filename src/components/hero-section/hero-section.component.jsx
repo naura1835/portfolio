@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap, Power1, Power3, Power4 } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+import { CONTACT_DATA } from "../../data/contactData";
 import CTAButton from "../CTA-button/CTA-button.component";
 
 import {
@@ -17,7 +18,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 const HeroSection = () => {
   let heroRef = useRef(null);
-  const [dimensions, setDimensions] = React.useState({
+  const [dimensions, setDimensions] = useState({
     height: window.innerHeight,
     width: window.innerWidth,
   });
@@ -163,57 +164,19 @@ const HeroSection = () => {
           </>
         ) : (
           <div style={{ display: "flex", gap: "20px" }}>
-            <a
-              href="https://twitter.com/NauraCodes"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src={
-                  require("../../images/icons/outline/iconoir_twitter.svg")
-                    .default
-                }
-                alt="Twitter icon"
-              />
-            </a>
-            <a
-              href="https://github.com/naura1835"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src={
-                  require("../../images/icons/outline/codicon_github-alt.svg")
-                    .default
-                }
-                alt="Github icon"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/khadija-garba-6257a4201"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src={
-                  require("../../images/icons/outline/ph_linkedin-logo.svg")
-                    .default
-                }
-                alt="LinkedIn icon"
-              />
-            </a>
-            <a
-              href="mailto:khadijagarbag@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src={
-                  require("../../images/icons/outline/carbon_email.svg").default
-                }
-                alt="Email icon"
-              />
-            </a>
+            {CONTACT_DATA.map((contact, index) => (
+              <a
+                key={index}
+                href={`https://${contact.url}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={require(`../../images/icons/outline/${contact.imgSrc}`)}
+                  alt={contact.altText}
+                />
+              </a>
+            ))}
           </div>
         )}
       </HeroSectionContent>

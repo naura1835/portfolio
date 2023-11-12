@@ -137,6 +137,7 @@ const HeroSection = () => {
         {window.innerWidth >= 712 ? (
           <>
             <CTAButton
+              url="https://twitter.com/NauraCodes"
               socialIcon="icons/akar-icons_twitter-fill.svg"
               altText="Twitter icon"
               classInfo="twt"
@@ -162,7 +163,11 @@ const HeroSection = () => {
           </>
         ) : (
           <div style={{ display: "flex", gap: "20px" }}>
-            <a href="/" target="_blank" rel="noreferrer">
+            <a
+              href="https://twitter.com/NauraCodes"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={
                   require("../../images/icons/outline/iconoir_twitter.svg")

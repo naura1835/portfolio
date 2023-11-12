@@ -32,17 +32,18 @@ const ProjectOverview = () => {
     index.current = index.current - 1;
 
     gsap.to(carouselRef.current, {
-      xPercent: -25 * index.current,
+      xPercent: -20 * index.current,
     });
   };
 
   const nextProject = () => {
+    console.log(index.current);
     if (index.current === 3) return;
 
     index.current = index.current + 1;
 
     gsap.to(carouselRef.current, {
-      xPercent: -25 * index.current,
+      xPercent: -20 * index.current,
     });
   };
 
@@ -111,7 +112,9 @@ const ProjectOverview = () => {
                 </MediumText>
                 <div style={{ display: "flex", gap: "20px" }}>
                   <ProjectLink href={project.url}>Go to Website</ProjectLink>
-                  <ProjectLink href={project.repo}>Github</ProjectLink>
+                  {project.repo.length > 0 && (
+                    <ProjectLink href={project.repo}>Github</ProjectLink>
+                  )}
                 </div>
               </ProjectDetails>
             </Project>

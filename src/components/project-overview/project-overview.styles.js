@@ -16,7 +16,7 @@ export const Wrapper = styled.section`
 
 export const ProjectList = styled.ul`
   list-style-type: none;
-  width: 500%;
+  width: 620%;
   margin-left: -100%;
   margin-right: -100%;
 

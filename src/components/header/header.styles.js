@@ -108,6 +108,7 @@ export const MenuItem = styled.li.attrs((props) => ({
     &.menu-item--active {
       opacity: 1;
       transition: opacity 0.8s linear;
+      transition-delay: 0.1s;
     }
   }
 `;
@@ -117,6 +118,9 @@ export const Menu = styled.ul`
   top: 100%;
   list-style-type: none;
   display: flex;
+
+  visibility: ${(props) => (props.menu ? "visibile" : "hidden")};
+  /* display: ${(props) => (props.menu ? "flex" : "none")}; */
   flex-direction: column;
   gap: 1.25rem;
   padding: 1rem;

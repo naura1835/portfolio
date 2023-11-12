@@ -1,13 +1,41 @@
 import styled from "styled-components";
 
-import { MediumText } from "../../globalStyles/textStyles";
+import { BodyMainText, Display } from "../../globalStyles/textStyles";
+import { breakpointsUp } from "../../globalStyles/breakpoints";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
+  background: rgba(171, 135, 255, 0.15);
+  padding: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  @media (max-width: 605px) {
-    width: 100%;
+
+  @media ${breakpointsUp["tablet-landscape-up"]} {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
   }
 `;
-export const ContactIntro = styled(MediumText)``;
+
+export const ContactIntro = styled.div`
+  ${Display}, ${BodyMainText} {
+    text-align: center;
+  }
+
+  > div {
+    width: 200px;
+    margin-inline: auto;
+  }
+
+  @media ${breakpointsUp["tablet-landscape-up"]} {
+    margin-top: 4rem;
+    max-width: 30.75rem;
+
+    ${Display}, ${BodyMainText} {
+      text-align: start;
+    }
+
+    > div {
+      margin-inline: unset;
+    }
+  }
+`;

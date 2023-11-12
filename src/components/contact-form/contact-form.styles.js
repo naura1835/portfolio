@@ -10,15 +10,13 @@ export const Wrapper = styled.form`
   grid-template-columns: 1fr;
   padding: 2rem 2rem;
   grid-gap: 20px;
-  width: 600px;
+  max-width: 480px;
+  width: 100%;
   height: auto;
   z-index: 10;
-
-  @media (max-width: 705px) {
-    width: 100%;
-    padding: 5vw;
-  }
+  margin-inline: auto;
 `;
+
 export const CustomTextArea = styled.textarea`
   border: solid 1px rgba(0, 0, 0, 0.3);
   background-color: transparent;
@@ -33,6 +31,7 @@ export const CustomTextArea = styled.textarea`
   &:focus {
     outline: rgba(26, 33, 81, 0.7);
   }
+
   @media (max-width: 605px) {
     width: 100%;
   }
